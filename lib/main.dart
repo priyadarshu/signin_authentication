@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:signin_authentication/pages/homepage.dart';
 
-//import 'package:signin_authentication/provider/facebooksigninprovider.dart';
-//import 'package:signin_authentication/pages/google-signupbtn.dart';
-//fluimport 'package:signin_authentication/pages/homepage.dart';
-//import 'package:firebase_auth/firebase_auth.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -25,6 +21,8 @@ class _MyAppState extends State<MyApp> {
       title: "SignIn Authenticator App",
       theme: ThemeData(
         primaryColor: Colors.blueGrey[700],
+        brightness: Brightness.light,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(),
     );
